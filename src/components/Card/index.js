@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import React from 'react';
 import Chip from '../../assets/chip.png';
 import ImgLogo from '../../assets/logo.png';
 
@@ -33,12 +33,9 @@ const Card = ({
   validThru = '12/34',
   securityCode = '123',
 }) => {
-  const [state, setState] = useState(true);
-  const handleFlip = () => { setState(!state) };
-
   return (
     <Container >
-      <Flipper onClick={handleFlip} flip={state}>
+      <Flipper flip={reverse}>
         <Front>
           <HeaderFront>
             <WrapperBoll>
