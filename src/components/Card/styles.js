@@ -3,7 +3,7 @@ import styled from 'styled-components';
 export const Container = styled.div`
   background-color: transparent;
   width: 25em;
-  height: 15em;
+  height: 16em;
   perspective: 1000px; 
 `;
 
@@ -21,7 +21,7 @@ export const Flipper = styled.div`
 export const Front = styled.div`
   position: absolute;
   width: 25em;
-  height: 15em;
+  height: 16em;
   -webkit-backface-visibility: hidden; /* Safari */
   backface-visibility: hidden;
 
@@ -33,20 +33,16 @@ export const Back = styled.div`
   border-radius: 1em;
   position: absolute;
   width: 25em;
-  height: 15em;
+  height: 16em;
   -webkit-backface-visibility: hidden; /* Safari */
   backface-visibility: hidden;
 
   background-color: #8A05BE;
   color: white;
   transform: rotateY(180deg);
-  -webkit-transform:rotateY(180deg);
-  -moz-transform:rotateY(180deg);
-  -o-transform:rotateY(180deg);
-  -ms-transform:rotateY(180deg);
-  unicode-bidi:bidi-override;
-  direction:rtl;
 `;
+
+// front
 
 export const HeaderFront = styled.div`
   width: 95%;
@@ -102,3 +98,51 @@ export const WrapperName = styled.div`
 export const Name = styled.h3`
   color: #fff;
 `;
+
+// back
+
+export const Description = styled.h6`
+  font-size: .5em;
+  text-align: left;
+  margin: 1em;
+`;
+
+export const BarReader = styled.div`
+  width: 100%;
+  height: 3.5em;
+  background: #C4C4C4;
+`;
+
+export const Text = styled.h3`
+  text-align: left;
+  margin-left: 2em;
+  margin-top: -1px;
+`;
+
+export const Selo = styled.div`
+  width: 4em;
+  margin-top: -.5em;
+  margin-bottom: .5em;
+  height: 2.4em;
+  border-radius: 3em;
+  background: #EAEDED;
+  margin-left: 2em;
+`;
+
+export const WrapperInformations = styled.div`
+  margin-left: 2em;
+  margin-top: -1em;
+  display: flex;
+`;
+
+export const ItemInformation = styled.div`
+  display: flex;
+  margin-right: 2em;
+  min-width: 3.5em;
+  width: 3.5em;
+`;
+export const Sup = styled.sup`
+  width: 1em;
+  font-size: .4em;
+`;
+export const NumberText = styled.h4``;

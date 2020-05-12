@@ -16,16 +16,24 @@ import {
   WrapperName,
   Name,
   Logo,
+  Description,
+  BarReader,
+  Text,
+  Selo,
+  ItemInformation,
+  WrapperInformations,
+  NumberText,
+  Sup,
 } from './styles';
 
 const Card = ({
   reverse,
-  name = 'Marcelo',
-  cardNumber,
-  validThru,
-  securityCode,
+  name = 'Marcelo Silva',
+  cardNumber = '0000 0000 0000 0000',
+  validThru = '12/34',
+  securityCode = '123',
 }) => {
-  const [state, setState] = useState(false);
+  const [state, setState] = useState(true);
   const handleFlip = () => { setState(!state) };
 
   return (
@@ -47,10 +55,38 @@ const Card = ({
           </WrapperName>
         </Front>
         <Back>
-          <div>
-            <input placeholder="teste" />
-            <label>nome</label>
-          </div>
+          <Description>
+            issue by Nubank under license by Mastercard internacional.
+          </Description>
+          <BarReader />
+          <Text>gold</Text>
+          <Selo />
+          <Text>{cardNumber}</Text>
+          <WrapperInformations>
+            <ItemInformation>
+              <Sup>
+                MEMBER
+                SINCE
+              </Sup>
+              <NumberText>01/18</NumberText>
+            </ItemInformation>
+
+            <ItemInformation>
+              <Sup>
+                VALID
+                THRU
+              </Sup>
+              <NumberText>{validThru}</NumberText>
+            </ItemInformation>
+
+            <ItemInformation>
+              <Sup>
+                SECURITY
+                CODE
+              </Sup>
+              <NumberText>{securityCode}</NumberText>
+            </ItemInformation>
+          </WrapperInformations>
         </Back>
       </Flipper>
     </Container>
