@@ -30,7 +30,8 @@ const Card = ({
   reverse,
   name = 'Marcelo Silva',
   cardNumber = '0000 0000 0000 0000',
-  validThru = '12/34',
+  validThruOne = '00',
+  validThruTwo = '00',
   securityCode = '123',
 }) => {
   return (
@@ -58,7 +59,7 @@ const Card = ({
           <BarReader />
           <Text>gold</Text>
           <Selo />
-          <Text>{cardNumber}</Text>
+          <Text>{cardNumber.replace(/^(\d{4})(\d{4})(\d{4})(\d{4})/, '$1 $2 $3 $4')}</Text>
           <WrapperInformations>
             <ItemInformation>
               <Sup>
@@ -73,7 +74,7 @@ const Card = ({
                 VALID
                 THRU
               </Sup>
-              <NumberText>{validThru}</NumberText>
+              <NumberText>{`${validThruOne}/${validThruTwo}`}</NumberText>
             </ItemInformation>
 
             <ItemInformation>

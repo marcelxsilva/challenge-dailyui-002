@@ -116,7 +116,8 @@ export const BarReader = styled.div`
 export const Text = styled.h3`
   text-align: left;
   margin-left: 2em;
-  margin-top: -1px;
+  margin-top: 2px;
+  margin-bottom: 1em;
 `;
 
 export const Selo = styled.div`
@@ -137,12 +138,14 @@ export const WrapperInformations = styled.div`
 
 export const ItemInformation = styled.div`
   display: flex;
+  height: auto;
   margin-right: 2em;
-  min-width: 3.5em;
-  width: 3.5em;
 `;
+
 export const Sup = styled.sup`
-  width: 1em;
   font-size: .4em;
+  width: 2em;
 `;
-export const NumberText = styled.h4``;
+export const NumberText = styled.h4`
+  margin: .5em;
+`;
